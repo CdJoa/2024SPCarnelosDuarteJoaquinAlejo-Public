@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Segundo Parcial</title>
+</head>
+<body>
+    <div id="spinner" class="spinner" style="display: none;">
+        <div class="spinner-circle"></div>
+    </div>
+    <form id="form-datos">
+        <h2>Form datos</h2>
+        <label for="filtro">Filtrar por:</label>
+        <select id="filtro" name="filtro">
+            <option value="0">Todos</option>
+            <option value="1">Auto</option>
+            <option value="2">Camion</option>
+        </select>
+
+        <div id="checklist">
+            <label><input type="checkbox" name="checklist" value="id" checked> ID </label>
+            <label><input type="checkbox" name="checklist" value="modelo" checked> modelo </label>
+            <label><input type="checkbox" name="checklist" value="anoFabricacion" checked> anoFabricacion </label>
+            <label><input type="checkbox" name="checklist" value="velMax" checked> velMax</label>
+
+            <label><input type="checkbox" name="checklist" value="asientos" checked> asientos </label>
+            <label><input type="checkbox" name="checklist" value="cantidadPuertas" checked> cantidadPuertas</label>
+
+
+            <label><input type="checkbox" name="checklist" value="carga"checked> carga </label>
+            <label><input type="checkbox" name="checklist" value="autonomia" checked>autonomia </label>
+
+        </div>
+
+
+
+        <table id="tabla-Vehiculos">
+            <thead>
+                <tr>
+
+                </tr>
+                <tr>
+
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <br></br>
+        <button id="btn-agregar" type="button" style="display: block; margin: 0 auto;">Agregar Elemento</button>
+
+    </form>
+
+    <div id="form-ABM" style="display: none;">
+        <h2>Form ABM</h2>
+        <div class="title" id="form-ABM-encabezado">
+            <h5>Título Estático</h5>
+        </div>
+
+        <div class="id">
+            <label for="abm-id">ID:</label>
+            <input type="number" id="abm-id" readonly>
+        </div>
+
+        <div class="modelo">
+            <label for="abm-modelo">modelo:</label>
+            <input type="text" id="abm-modelo" name="modelo">
+        </div>
+
+        <div class="anoFabricacion">
+            <label for="abm-modelo">anoFabricacion:</label>
+            <input type="text" id="abm-anoFabricacion" name="anoFabricacion">
+        </div>
+
+        <div class="velMax">
+            <label for="abm-velMax">velMax:</label>
+            <input type="number" id="abm-velMax" name="velMax">
+        </div>
+
+
+
+        <select id="filtro-abm" name="filtro-abm">
+            <option value="0">Todos</option>
+            <option value="1">Auto</option>
+            <option value="2">Camion</option>
+        </select>
+        <div id="campos_faltantes">
+            <span class="Camion" style="display: none;">
+                <div class="campo">
+                    <label for="abm-carga">carga:</label>
+                    <input type="string" id="abm-carga" name="carga">
+                </div>
+                <div class="campo">
+                    <label for="abm-autonomia">autonomia:</label>
+                    <input type="string" id="abm-autonomia" name="autonomia">
+                </div>
+
+            </span>
+            <span class="Auto" style="display: none;">
+                <div class="campo">
+                    <label for="abm-cantidadPuertas">cantidadPuertas:</label>
+                    <input type="string" id="abm-cantidadPuertas" name="cantidadPuertas">
+                </div>
+
+                <div class="campo">
+                    <label for="abm-asientos">asientos:</label>
+                    <input type="number" id="abm-asientos" name="asientos">
+                </div>
+            </span>
+        </div>
+        <button id="btn-cancelar" type="button">Cancelar</button>
+        <button id="btn-aceptar">Aceptar</button>
+
+
+        </form>
+
+
+</body>
+<script src="funciones.js"></script>
+
+</html>
